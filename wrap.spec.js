@@ -18,4 +18,7 @@ describe('wrap', () => {
       'a b a c a b a'.split(' ').join('\n')
     );
   });
+  it('breaks lines at word boundaries', () => {
+    expect(wrap("out, out brief flame", 8)).to.equal('out, out\nbrief\nflame')
+  })
 });
